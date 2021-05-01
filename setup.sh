@@ -1,5 +1,5 @@
 # add user to audio group
-sudo gpasswd -a Djay audio
+sudo gpasswd -a djay audio
 sudo pacman -S alsa alsa-utils
 
 # install xmonad and other
