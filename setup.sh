@@ -10,7 +10,7 @@ sudo systemctl enable lightdm
 sudo pacman -S xorg
 
 # install i3
-sudo pacman i3-gaps i3bloacks i3lock i3status
+sudo pacman i3-gaps i3blocks i3lock i3status
 
 # install polybar
 git clone https://aur.archlinux.org/polybar.git
