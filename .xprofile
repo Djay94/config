@@ -1,0 +1,8 @@
+# keyboard layout
+setxkbmap gb &
+
+# set wallpaper
+nitrogen --restore &
+
+# compositor
+picom -f
