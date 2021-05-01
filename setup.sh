@@ -10,10 +10,10 @@ sudo systemctl enable lightdm
 sudo pacman -S xorg xmonad xmonad-contrib xmobar
 
 # install other necessities
-sudo pacman -S dmenu picom nitrogen termite
+sudo pacman -S dmenu picom nitrogen termite pcmanfm
 
 # install other
-sudo pacman -S chromium
+sudo pacman -S chromium archlinux-wallpaper
 
 # copy config files
 cp .xprofile ~/
