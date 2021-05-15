@@ -6,17 +6,17 @@ sudo pacman -S alsa alsa-utils
 sudo pacman -S lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm
 
+# install polybar
+git clone https://aur.archlinux.org/polybar.git
+cd polybar
+makepkg -s -i -r -c
+cd ..
+
 # install xorg
 sudo pacman -S xorg
 
 # install i3
 sudo pacman i3-gaps i3blocks i3lock i3status
-
-# install polybar
-git clone https://aur.archlinux.org/polybar.git
-cd polybar
-makepkg -s -i -c
-cd ..
 
 # install i3 necessities
 sudo pacman -S dmenu picom nitrogen
