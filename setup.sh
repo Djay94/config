@@ -15,7 +15,7 @@ sudo pacman i3-gaps i3blocks i3lock i3status
 # install polybar
 git clone https://aur.archlinux.org/polybar.git
 cd polybar
-makepkg -s -i -r -c
+makepkg -s -i -c
 cd ..
 
 # install i3 necessities
