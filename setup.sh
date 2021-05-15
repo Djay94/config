@@ -22,7 +22,7 @@ cd ..
 sudo pacman -S dmenu picom nitrogen
 
 # install other
-sudo pacman -S firefox archlinux-wallpaper neofetch emacs vim xfce4-terminal alacritty pcmanfm ark audacity blender make discord gimp htop mousepad obs-studio qbittorent vlc
+sudo pacman -S firefox archlinux-wallpaper neofetch emacs vim xfce4-terminal alacritty pcmanfm ark audacity blender make discord gimp htop mousepad obs-studio qbittorrent vlc
 
 # copy config files
 cp -r i3 ~/.config
