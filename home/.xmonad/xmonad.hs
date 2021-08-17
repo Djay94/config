@@ -52,7 +52,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_Tab   ), spawn "flameshot gui")
 
 	-- launch browser
-    , ((modm .|. shiftMask, xK_s     ), spawn "chromium")
+    , ((modm .|. shiftMask, xK_s     ), spawn "firefox")
 
 	-- launch ranger
 	, ((modm .|. shiftMask, xK_d     ), spawn $ XMonad.terminal conf ++ " ranger")
@@ -101,14 +101,13 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- other
 
     -- Raise Volume
-    --, ((modm,                0x1008ff13), spawn "rofi -show")
-
+    , ((0   ,                0x1008ff13), spawn "amixer -D pulse sset Master 5%+")
 
     -- Mute Volume
-    --, ((modm,                0x1008ff12), spawn "rofi -show")
+    , ((0   ,                0x1008ff12), spawn "amixer -D pulse sset Master 0%")
 
     -- Lower Volume   
-    --, ((modm,                0x1008ff11), spawn "rofi -show")
+    , ((0   ,                0x1008ff11), spawn "amixer -D pulse sset Master 5%-")
     
     -- Quit xmonad
     , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
