@@ -82,3 +82,6 @@ sudo usermod -G libvirt -a dj
 
 # Enable Audio
 sudo usermod -a audio dj
+
+# Switch to zsh shell
+chsh -s $(which zsh)
