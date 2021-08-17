@@ -1,14 +1,14 @@
 
-xmonad.hs:55:1: warning: [-Wtabs]
-    Tab character found here, and in four further locations.
+xmonad.hs:54:1: warning: [-Wtabs]
+    Tab character found here, and in six further locations.
     Please use spaces instead.
    |
-55 |         -- launch browser
+54 |         -- launch browser
    | ^^^^^^^^
 
-xmonad.hs:152:16: warning: [-Wdeprecations]
+xmonad.hs:154:16: warning: [-Wdeprecations]
     In the use of ‘spacing’ (imported from XMonad.Layout.Spacing):
     Deprecated: "Use spacingRaw instead."
     |
-152 |      tiled   = spacing 5 $ Tall nmaster delta ratio 
+154 |      tiled   = spacing 5 $ Tall nmaster delta ratio 
     |                ^^^^^^^

@@ -3,8 +3,7 @@ import System.Exit
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Spacing
 import XMonad.Actions.SpawnOn
-import XMonad.Util.EZConfig
-import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.EwmhDesktops
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
@@ -47,7 +46,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
     -- launch rofi
-    , ((modm,               xK_d     ), spawn "rofi -show run -theme slate")
+    , ((modm,               xK_d     ), spawn "rofi -show run -theme ~/.xmonad/theme.rasi")
 
     -- launch flameshot
     , ((modm,               xK_Tab   ), spawn "flameshot gui")
@@ -57,6 +56,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
 	-- launch ranger
 	, ((modm .|. shiftMask, xK_d     ), spawn $ XMonad.terminal conf ++ " ranger")
+	
+    -- launch tor browser
+	, ((modm .|. shiftMask, xK_a     ), spawn "torbrowser-launcher")
 	
 	-- windows
 
@@ -188,7 +190,7 @@ myStartupHook = do
 ------------------------------------------------------------------------
 -- Run XMonad
 
-main = xmonad myConfig
+main = xmonad $ ewmh myConfig
 
 myConfig = def {
       -- Simple
