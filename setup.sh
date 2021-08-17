@@ -14,7 +14,7 @@ curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | gpg --import
 
 # Install packages
 sudo pacman -Syyu
-sudo pacman -S amd-ucode audacity blender cmake discord dunst ed edk2-ovmf feh firefox flameshot gedit gimp git glava htop kitty linux-headers make mpv micro nasm neofetch nitrogen obs-studio qbittorrent qemu qemu-arch-extra ranger rofi sfml steam thunar torbrowser-launcher ungoogled-chromium unzip vim virt-manager virtualbox wget wine xmonad xmonad-contrib xmonad-utils xorg youtube-dl zip zsh mesa base-devel
+sudo pacman -S amd-ucode intel-ucode audacity blender cmake discord dunst ed edk2-ovmf feh firefox flameshot gedit gimp git glava htop kitty make mpv micro nasm neofetch nitrogen obs-studio qbittorrent qemu qemu-arch-extra ranger rofi sfml steam thunar torbrowser-launcher ungoogled-chromium unzip vim virt-manager virtualbox wine xmonad xmonad-contrib xmonad-utils youtube-dl zip zsh mesa base-devel ebtables
 
 # Install aur packages
 mkdir temp
@@ -74,3 +74,11 @@ echo "default_linemode devicons" >> $HOME/.config/ranger/rc.conf
 
 # Install vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+# Enable libvirt
+sudo systemctl enable libvirtd
+sudo systemctl start libvirtd
+sudo usermod -G libvirt -a dj
+
+# Enable Audio
+sudo usermod -a audio dj
